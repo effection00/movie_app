@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="login.js"></script>
+
+</head>
+<body>
+ <section class="login-form">
+    <h2>ASK THE MOON</h2>
+    <h1>SIGN UP</h1>
+       {% if signup != None %}
+            <span><h2>{{com}}</h2></span>
+        {% else %}
+              <span><h2>{{dis}}</h2></span>
+        {% endif %}
+      
+    <form action="/sign" method="post">
+      <div class="int-area">
+         <input type="text" name="ID" id="ID" autocomplete="off" required>
+         <label for="id">USER ID</label>
+
+      </div>
+         <div class="int-area">
+        <input type="text" name="Email" id="Email" autocomplete="off" required>
+        <label for="email">E-mail</label>
+      </div>
+
+       </div>
+         <div class="int-area">
+        <input type="text" name="Nickname" id="Nickname" autocomplete="off" required>
+        <label for="nickname">Nickname</label>
+      </div>
+
+
+      <div class="int-area">
+        <input type="password" name="PW" id="PW" autocomplete="off" required>
+        <label for="id">USER PASSWORD</label>
+      </div>
+
+      <div class="btn-area">
+          <button type="submit" href="/">CREATE</button></form>
+      </div>
+      <div class="caption">
+              <a href="/">LOGIN PAGE</a>
+      </div>
+
+
+   </input>
+</section>
+
+<script>
+
+
+</script>
+</body>
+</html>
+
+
+

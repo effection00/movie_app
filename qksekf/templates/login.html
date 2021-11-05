@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='login.js') }}"></script>
+
+</head>
+<body>
+ <section class="login-form">
+    <h1>ASK THE MOON</h1>
+                  {% if isuser|length%} 
+                     <span style="text-align:center;"><h2>{{enter1}}</h2>
+                        <figure class="text-center">
+                              <button type="button" class="btn btn-dark" onclick="location.href='/new'">사이트입장</button>
+                              </figcaption></figure>
+                  
+                  {% else %}
+                       <span><h2>{{enter2}}</h2></span>
+                        {% endif %}
+   <form action="/" method="post">
+      <div class="int-area">
+            <div>
+   
+      
+         </div>
+         <div>
+            <input type="text" name="ID" id="ID" autocomplete="off" required>
+            <label for="id">USER ID</label>
+         </div>
+         <div class="int-area">
+         <input type="password" name="PW" id="PW" autocomplete="off" required>
+         <label for="id">USER PASSWORD</label>
+         </div>
+         <div class="btn-area">
+            <button type="submit" href="/">LOGIN</button></a></form>
+            <br>
+            <br>
+  
+            
+         </div>
+         <div class="caption">
+         
+               <a href="/sign">Sign up</a></div></input>
+      
+   </section>
+   <script>
+
+   </script>
+   </body>
+   </html>
+

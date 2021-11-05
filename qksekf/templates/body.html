@@ -1,0 +1,154 @@
+ <div id="app">
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+    <div class="sidebar-header"style="height:150px;width: 170px; padding: 30px 50px 20px;">
+        <img src="{{ url_for('static', filename='assets/images/ASK THE MOON.png') }}" alt="" srcset="" style="height:100px;width: 140px; padding: 1px;">
+        
+    </div>
+    <div class="sidebar-menu">
+        <ul class="menu">
+            
+            
+                <li class='sidebar-title'>Menu</li>
+            
+            
+            
+                <li class="sidebar-item active ">
+                    <a href="/new" class='sidebar-link'>
+                        <i data-feather="home" width="20"></i> 
+                        <span>Home</span>
+                    </a>
+                    
+                </li>
+
+        
+                    <a href="/findmovie" class='sidebar-link'>
+                        <i data-feather="briefcase" width="20"></i> 
+                        <span>My Movie</span>
+                    </a>
+
+            </footer>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <p>나와 취향이 비슷한 사람들이 낸 영화의 별점은?</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Attacking preferences <cite title="Source Title">FIND MOVIE</cite>
+    <br>
+    <br>
+      <button type="button" class="btn btn-dark" onclick="location.href='/findmovie'">Click</button>
+
+  </figcaption>
+         
+
+            <br>
+            <br>
+            <br>
+            <p style="font: 70px; bold: true;">Recent Movie Review(실시간)</p>
+            </figure>
+<table class="table">
+  <thead>
+
+    <tr>
+      <th scope="col"><br></th>
+      <th scope="col"><br></th>
+      <th scope="col"></th>
+      <th scope="col">영화</th>
+      <th scope="col">별점</th>
+      <th scope="col">리뷰</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <td>{{recents[0]['movie_title']}}</td>
+      <td>{{recents[0]['review_star']}}</td>
+      {% if recents[0]['review_text']|length < 3 %}
+           <td>리뷰없음</td>
+      {% else %}
+           <td>{{recents[0]['review_text']}}</td>
+      {% endif %}
+    </tr>
+    <tr>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <td>{{recents[1]['movie_title']}}</td>
+      <td>{{recents[1]['review_star']}}</td>
+      {% if recents[1]['review_text']|length < 3 %}
+           <td>리뷰없음</td>
+      {% else %}
+           <td>{{recents[1]['review_text']}}</td>
+      {% endif %}
+ 
+    <tr>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <td>{{recents[2]['movie_title']}}</td>
+      <td>{{recents[2]['review_star']}}</td>
+      {% if recents[2]['review_text']|length < 3 %}
+           <td>리뷰없음</td>
+      {% else %}
+           <td>{{recents[2]['review_text']}}</td>
+      {% endif %}
+    </tr>
+   <tr>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <td>{{recents[3]['movie_title']}}</td>
+      <td>{{recents[3]['review_star']}}</td>
+      {% if recents[3]['review_text']|length < 3 %}
+           <td>_리뷰 없음_</td>
+      {% else %}
+           <td>{{recents[3]['review_text']}}</td>
+      {% endif %}
+    </tr>
+     
+    <tr>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <td>{{recents[4]['movie_title']}}</td>
+      <td>{{recents[4]['review_star']}}</td>
+      {% if recents[4]['review_text']|length < 3 %}
+           <td>리뷰없음</td>
+      {% else %}
+           <td>{{recents[4]['review_text']}}</td>
+      {% endif %}
+    </tr>
+     
+   <tr>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <th scope="row"><br></th>
+      <td>{{recents[5]['movie_title']}}</td>
+      <td>{{recents[5]['review_star']}}</td>
+      {% if recents[5]['review_text']|length < 3 %}
+           <td>리뷰없음</td>
+      {% else %}
+           <td>{{recents[5]['review_text']}}</td>
+      {% endif %}
+    </tr>
+  </tbody>
+</table>
+
+    {{ url_for('static', filename='assets/js/main.js') }}
+    <script src="{{ url_for('static', filename='assets/js/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='assets/vendors/chartjs/Chart.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendors/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/pages/dashboard.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
