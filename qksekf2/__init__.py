@@ -20,8 +20,8 @@ def create_app():
     # app.config : 플라스크의 앱 내부 설정
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     # db 주소 
-    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://hmrbtvnbrfmazg:acb569db97580a4588a921f9f821bfbd267426e12bd4d5813e1fdf87372a8e60@ec2-52-6-211-59.compute-1.amazonaws.com:5432/ddvr1ata3kfu3t"
-    #app.config['SQLALCHEMY_DATABASE_URI']= os.getenv('DATABASE_URI')
+    # app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://hmrbtvnbrfmazg:acb569db97580a4588a921f9f821bfbd267426e12bd4d5813e1fdf87372a8e60@ec2-52-6-211-59.compute-1.amazonaws.com:5432/ddvr1ata3kfu3t"
+    app.config['SQLALCHEMY_DATABASE_URI']= os.getenv('DATABASE_URI')
 
 
 
