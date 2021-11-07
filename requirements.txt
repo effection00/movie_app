@@ -28,7 +28,7 @@ pycparser==2.20
 pyOpenSSL==20.0.1
 pyparsing==2.4.7
 PySocks==1.7.1
-python==3.8.10
+Python==3.8.10
 python-dateutil==2.8.2
 python-editor==1.0.4
 requests==2.26.0
