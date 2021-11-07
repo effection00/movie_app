@@ -136,7 +136,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
-                                <h3 class='card-title'>{{recents[0]['movie_title']}}</h3>
+                                <h3 class='card-title'>{{recents[0]}}</h3>
                                 <div class="card-right d-flex align-items-center">
                                     <p></p>
                                 </div>
@@ -153,7 +153,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
-                                <h3 class='card-title'>{{recents[1]['movie_title']}}</h3>
+                                <h3 class='card-title'>{{recents[1]}}</h3>
                                 <div class="card-right d-flex alig-items-center">
                                     <p></p>
                                 </div>
@@ -172,7 +172,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
-                                <h3 class='card-title'>{{recents[2]['movie_title']}}</h3>
+                                <h3 class='card-title'>{{recents[2]}}</h3>
                                 <div class="card-right d-flex align-items-center">
                                     <p></p>
                                 </div>
@@ -189,7 +189,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class='px-3 py-3 d-flex justify-content-between'>
-                                <h3 class='card-title'>{{recents[3]['movie_title']}}</h3>
+                                <h3 class='card-title'>{{recents[3]}}</h3>
                                 <div class="card-right d-flex align-items-center">
                                     <p></p>
                                 </div>
@@ -246,48 +246,48 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>{{recents[0]['movie_title']}}</td>
-                                        <td>{{recents[0]['review_star']}}</td>
-                                        {% if recents[0]['review_text']|length < 3 %}
+                                        <td>{{recents_review[0]['movie_title']}}</td>
+                                        <td>{{recents_review[0]['review_star']}}</td>
+                                        {% if recents_review[0]['review_text']|length < 3 %}
                                             <td>리뷰없음</td>
                                         {% else %}
-                                            <td>{{recents[0]['review_text']}}</td>
+                                            <td>{{recents_review[0]['review_text']}}</td>
                                         {% endif %}
                                     </tr>
                                     <tr>
-                                        <td>{{recents[1]['movie_title']}}</td>
-                                        <td>{{recents[1]['review_star']}}</td>
-                                        {% if recents[1]['review_text']|length < 3 %}
+                                        <td>{{recents_review[1]['movie_title']}}</td>
+                                        <td>{{recents_review[1]['review_star']}}</td>
+                                        {% if recents_review[1]['review_text']|length < 3 %}
                                             <td>리뷰없음</td>
                                         {% else %}
-                                            <td>{{recents[1]['review_text']}}</td>
+                                            <td>{{recents_review[1]['review_text']}}</td>
                                         {% endif %}
                                     </tr>
                                     <tr>
-                                        <td>{{recents[2]['movie_title']}}</td>
-                                        <td>{{recents[2]['review_star']}}</td>
-                                        {% if recents[2]['review_text']|length < 3 %}
+                                        <td>{{recents_review[2]['movie_title']}}</td>
+                                        <td>{{recents_review[2]['review_star']}}</td>
+                                        {% if recents_review[2]['review_text']|length < 3 %}
                                             <td>리뷰없음</td>
                                         {% else %}
-                                            <td>{{recents[2]['review_text']}}</td>
+                                            <td>{{recents_review[2]['review_text']}}</td>
                                         {% endif %}
                                     </tr>
                                     <tr>
-                                        <td>{{recents[3]['movie_title']}}</td>
-                                        <td>{{recents[3]['review_star']}}</td>
-                                        {% if recents[3]['review_text']|length < 3 %}
+                                        <td>{{recents_review[3]['movie_title']}}</td>
+                                        <td>{{recents_review[3]['review_star']}}</td>
+                                        {% if recents_review[3]['review_text']|length < 3 %}
                                             <td>리뷰없음</td>
                                         {% else %}
-                                            <td>{{recents[3]['review_text']}}</td>
+                                            <td>{{recents_review[3]['review_text']}}</td>
                                         {% endif %}
                                     </tr>
                                     <tr>
-                                        <td>{{recents[4]['movie_title']}}</td>
-                                        <td>{{recents[4]['review_star']}}</td>
-                                        {% if recents[4]['review_text']|length < 3 %}
+                                        <td>{{recents_review[4]['movie_title']}}</td>
+                                        <td>{{recents_review[4]['review_star']}}</td>
+                                        {% if recents_review[4]['review_text']|length < 3 %}
                                             <td>리뷰없음</td>
                                         {% else %}
-                                            <td>{{recents[4]['review_text']}}</td>
+                                            <td>{{recents_review[4]['review_text']}}</td>
                                         {% endif %}
                                     </tr>
                                     

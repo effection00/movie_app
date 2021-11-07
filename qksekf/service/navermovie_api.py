@@ -4,8 +4,8 @@ import bs4
 import requests
 from bs4 import BeautifulSoup
 import urllib.request
-from qksekf.models import Movie
-from qksekf import db
+#from qksekf.models import Movie
+#from qksekf import db
 
 BASE_URL = "https://movie.naver.com/movie"
 
@@ -145,23 +145,15 @@ def push_movie_db(movie_title):
 
 def recent_movie():
     soup = get_html("https://movie.naver.com/movie/running/current.naver")
-    recent = soup.find_all('dt','tit','a')
+    recent = soup.find_all('dt','tit','a')[:4]
     list =[]
     list2=[]
-    list3=[]
     for i in recent:
        list.append(i.get_text().strip().split('\n'))
-    best = list[:7]
+    best = list
     for a in best:
         list2.append(a[1])
-    for b in list2:
-        c = get_one(b,1)
-        if c == []:
-            final = {'id': '_', 'review_text': '_', 'review_star': 0, 'movie_title': '_'}
-        else:
-            final = c[0]
-        list3.append(final)
-    return list3
+    return list2
 
 def movie3(movie1, movie2, movie3):
     list = get_one_one(movie1)+ get_one_one(movie2)+get_one_one(movie3)
@@ -176,3 +168,19 @@ def get_img(movie_title):
     recent = soup.find('div',class_ ='poster')
     new = recent.find('img')['src'] # src 크롤링 
     return new
+
+
+
+
+def recent_movie2():
+    soup = get_html("https://movie.naver.com/movie/point/af/list.naver")
+    recent = soup.find_all('td','title','a')
+    review_list = []
+    for b in recent:
+        review = {
+            'movie_title' : str(b.get_text("_",strip=True).split('_')[0]),
+            'review_text':str(b.get_text("_",strip=True).split('_')[3]),
+            'review_star': float(b.get_text("_",strip=True).split('_')[2]),
+                }
+        review_list.append(review)
+    return review_list

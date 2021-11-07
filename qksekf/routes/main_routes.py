@@ -55,12 +55,13 @@ def mine():
 @bp.route('/new')
 def real():
     recents = navermovie_api.recent_movie()
-    img1 = navermovie_api.get_img(recents[0]['movie_title'])
-    img2 = navermovie_api.get_img(recents[1]['movie_title'])
-    img3 = navermovie_api.get_img(recents[2]['movie_title'])
-    img4 =  navermovie_api.get_img(recents[3]['movie_title'])
+    recents_review = navermovie_api.recent_movie2()
+    img1 = navermovie_api.get_img(recents[0])
+    img2 = navermovie_api.get_img(recents[1])
+    img3 = navermovie_api.get_img(recents[2])
+    img4 =  navermovie_api.get_img(recents[3])
     
-    return render_template('data.html', recents=recents, img1=img1, img2=img2, img3=img3, img4=img4),200
+    return render_template('data.html', recents=recents,recents_review=recents_review, img1=img1, img2=img2, img3=img3, img4=img4),200
 
 @bp.route('/datatable')
 def datatable():
