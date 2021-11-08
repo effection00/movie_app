@@ -184,3 +184,5 @@ def recent_movie2():
                 }
         review_list.append(review)
     return review_list
+
+print(recent_movie())
